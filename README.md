@@ -37,3 +37,6 @@ Orientação base para quem deseja aprender um pouco do Framework Django/Python
     ```http://localhost:8000```
     - Este é o endereço padrão, caso queira alterar basta seguir a seguinte estrutura
         ```python manage.py runserver [HOST]:[PORT]```
+
+
+referência: Antonio Melé
