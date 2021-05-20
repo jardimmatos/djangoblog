@@ -22,10 +22,18 @@ Orientação base para quem deseja aprender um pouco do Framework Django/Python
     ```copiar local_settings.example.py``` para ```local_settings.py```
     - Configurar este arquivo conforme a necessidade, por padrão, já temos o necessário
 
-5. #### Criar um super usuário
+5. #### realizar as migrações no banco de dados
+    ```python manage.py migrate```
+
+6. #### Criar um super usuário
     ```python manage.py createsuperuser --username=[usuário] --email=[email do usuário]```
 
     - Após o último comando, será solicitado a criação da senha e confirmação 
 
-6. #### Executar o servidor
+7. #### Executar o servidor
      ```python manage.py runserver```
+
+8. #### Acessar no browser 
+    ```http://localhost:8000```
+    - Este é o endereço padrão, caso queira alterar basta seguir a seguinte estrutura
+        ```python manage.py runserver [HOST]:[PORT]```

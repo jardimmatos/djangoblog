@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Compartilhe um Post{% endblock %}
+
+{% block content %}
+
+{% if sent %}
+    E-mail enviado com sucesso! <br>
+    {{post.titulo}} foi enviado com sucesso para {{form.cleaned_data.email}}
+{% else %}
+    <h4>Compartilhe {{post.titulo}} por e-mail</h4>
+    <form method="POST">
+        {% for field in form %}
+            {{field.label_tag}} <br>
+            {{field}}
+            {{field.errors}} <br>
+        {% endfor %}
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="Enviar">
+    </form>
+{% endif %}
+
+{% endblock %}
